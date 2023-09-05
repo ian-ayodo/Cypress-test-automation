@@ -32,10 +32,26 @@ describe('authentication', () => {
 
     })
 
+    it('login without email address', () => {
+        cy.visit('https://thinking-tester-contact-list.herokuapp.com/login')
+        cy.get('#password').type("iT8~d?6q0Y0'&")
+        cy.get('#submit').click()
+        cy.get('#error').should('contain','Incorrect username or password')
+    })
+
+    it('login without password', () => {
+        cy.visit('https://thinking-tester-contact-list.herokuapp.com/login')
+        cy.get('#email').type('rferriman0@google.ca')
+        cy.get('#submit').click()
+        cy.get('#error').should('contain','Incorrect username or password')
+    })
+
     it('sign in', () => {
         cy.visit('https://thinking-tester-contact-list.herokuapp.com/login')
         cy.get('#email').type('rferriman0@google.ca')
         cy.get('#password').type("iT8~d?6q0Y0'&")
         cy.get('#submit').click()
     })
+
+   
 })
