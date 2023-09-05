@@ -1,0 +1,11 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "simple authentication page automation",
+  "main": "index.js",
+  "author": "Ian Ayodo",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.1.0"
+  }
+}

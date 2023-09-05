@@ -1,0 +1,24 @@
+describe('authentication', () => {
+    it('login with wrong credentials', () => {
+        cy.visit('https://thinking-tester-contact-list.herokuapp.com/login')
+        cy.get("#email").type("testing@gmail.com")
+        cy.get('#password').type('password')
+        cy.get('#submit').click()
+        cy.get('#error').should('be.visible')
+    })
+
+    it('create new user', () => {
+        cy.visit('https://thinking-tester-contact-list.herokuapp.com/login')
+        cy.get('#signup').click()
+        cy.get("#firstName").type('Royall')
+        cy.get("#lastName").type('Ferriman')
+        cy.get('#email').type('rferriman0@google.ca')
+        cy.get('#password').should('have.attr','type','password').type("iT8~d?6q0Y0'&")
+        cy.get('#submit').click()
+
+    })
+
+    it('sign', () => {
+        
+    })
+})
