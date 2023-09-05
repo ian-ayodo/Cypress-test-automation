@@ -8,7 +8,7 @@ This is a cypress project that test the login feature of https://thinking-tester
 2. Creating a new user
 3. Signing out
 
-# Negative test cases
+# Negative test scenarios:
 1. Creating a user with wrong credentials
 2. Signing in with wrong credentials
 3. Signing in without credentials
