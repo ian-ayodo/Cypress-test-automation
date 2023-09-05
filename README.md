@@ -1,6 +1,5 @@
 ## Login test automation usin Cypress
 
----
 This is a cypress project that test the login feature of https://thinking-tester-contact-list.herokuapp.com/
 
 ## Positive test scenarios:
